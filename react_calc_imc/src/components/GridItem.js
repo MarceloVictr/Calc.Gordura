@@ -11,6 +11,10 @@ export const GridItem = ({item}) => {
                 <img src={item.icon === 'up' ? upImage : downImage} alt="" width="30"/>
             </div>
             <div className={styles.gridTitle}>{item.title}</div>
+
+            {item.yourImc &&
+                <div className={styles.yourImc}>Seu Imc é de {item.yourImc} Kg/m2</div> 
+            }
             <div className={styles.gridInfo}>
                 <>
                     IMC está entre <strong>{item.imc[0]}</strong> e <strong>{item.imc[1]}</strong>
